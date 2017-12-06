@@ -303,7 +303,7 @@ def problem0c(circle, n, window):
       :type window: rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################
@@ -314,12 +314,14 @@ def problem0c(circle, n, window):
 
     center = circle.center
     radius = circle.radius
+    inside_color = circle.fill_color
 
     for k in range (n+1):
         if k == 0:
-            color_fill = circle.fill_color
+            inside_color = circle.fill_color
+            circle.attach_to(window)
         else:
-            color_fill = circle.
+            inside_color = None
 
         circle = rg.Circle(rg.Point(center.x + radius*2*k,center.y),radius)
 

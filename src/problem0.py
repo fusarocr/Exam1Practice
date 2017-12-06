@@ -227,7 +227,7 @@ def problem0b(n):
            since there are 46 primes between 2 and 200.
      """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################
@@ -312,7 +312,19 @@ def problem0c(circle, n, window):
     ####################################################################
     # ------------------------------------------------------------------
 
+    center = circle.center
+    radius = circle.radius
 
+    for k in range (n+1):
+        if k == 0:
+            color_fill = circle.fill_color
+        else:
+            color_fill = circle.
+
+        circle = rg.Circle(rg.Point(center.x + radius*2*k,center.y),radius)
+
+        circle.attach_to(window)
+        window.render(0.5)
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------

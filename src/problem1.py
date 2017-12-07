@@ -365,7 +365,7 @@ def problem1c(n):
             sum = sum*(k+2)
         else:
             sum = sum
-    
+
     return sum_of_digits(sum)
 
 # ----------------------------------------------------------------------

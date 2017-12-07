@@ -359,7 +359,14 @@ def problem1c(n):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 20 minutes.
     # ------------------------------------------------------------------
-
+    sum = 1
+    for k in range(n-1):
+        if is_prime(k+2) == True:
+            sum = sum*(k+2)
+        else:
+            sum = sum
+    
+    return sum_of_digits(sum)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

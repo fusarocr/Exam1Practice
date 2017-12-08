@@ -114,17 +114,17 @@ def problem2a(circle, rectangle, window):
     rectangle.attach_to(window)
     start = rectangle._upper_right_corner
     end = rectangle._lower_left_corner
-    line = rg.Line
     window.render()
     window.continue_on_mouse_click()
 
-    line = line(start, end)
+    line = rg.Line(start, end)
+    line.arrow = 'last'
     line.attach_to(window)
     window.render()
     window.continue_on_mouse_click()
 
     fill = rectangle.outline_color
-    circle_fill = circle.
+    circle.fill_color = fill
     circle.attach_to(window)
     window.render()
     window.continue_on_mouse_click()

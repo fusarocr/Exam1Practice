@@ -30,7 +30,7 @@ import rosegraphics as rg
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_problem3a()
+    #run_test_problem3a()
     run_test_problem3b()
 
 
@@ -246,6 +246,21 @@ def problem3b(m, point1):
     #    TIME ESTIMATE:   20 to 30 minutes.
     # ------------------------------------------------------------------
 
+    title = 'Problem 3b.'
+    window = rg.RoseWindow(400, 600, title)
+    column = 3
+    row_thickness = 0
+
+    for k in range(m):
+        problem3a(window, point1, column)
+        row_thickness = row_thickness + problem3a(window, point1, column)
+        point1 = rg.Point(point1.x, point1.y + 60)
+        column = column + 2
+
+    window.render()
+    window.close_on_mouse_click()
+
+    return row_thickness
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
